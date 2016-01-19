@@ -1,0 +1,14 @@
+{
+    "blueprint": "blueprint-sandbox",
+    "default_password": "vagrant",
+    "host_groups": [
+        {
+            "name": "host_group_1",
+            "hosts": [
+                {
+                    "fqdn": "$PARAM_HOST_NAME"
+                }
+            ]
+        }
+    ]
+}
