@@ -1,44 +1,87 @@
 {
   "configurations": [
+    {
+      "webhcat-site": {
+        "webhcat.proxyuser.hue.hosts": "*",
+        "webhcat.proxyuser.hue.groups": "*"
+      },
+      "hdfs-site": {
+        "dfs.webhdfs.enabled": "true"
+      },
+      "core-site": {
+        "hadoop.proxyuser.hcat.groups": "*",
+        "hadoop.proxyuser.hue.hosts": "*",
+        "hadoop.proxyuser.hcat.hosts": "*",
+        "hadoop.proxyuser.hue.groups": "*"
+      }
+    }
   ],
   "host_groups": [
     {
       "name": "host_group_1",
       "configurations" : [ ],
-"components" : [
-      { "name" : "DATANODE" },
-{ "name" : "HDFS_CLIENT" },
-{ "name" : "JOURNALNODE" },
-{ "name" : "NAMENODE" },
-{ "name" : "SECONDARY_NAMENODE" },
-{ "name" : "ZKFC" },
-{ "name" : "APP_TIMELINE_SERVER" },
-{ "name" : "NODEMANAGER" },
-{ "name" : "RESOURCEMANAGER" },
-{ "name" : "YARN_CLIENT" },
-{ "name" : "HISTORYSERVER"},
-{ "name" : "MAPREDUCE2_CLIENT" },
-{ "name" : "GANGLIA_MONITOR" },
-{ "name" : "GANGLIA_SERVER" },
-{ "name" : "HBASE_CLIENT" },
-{ "name" : "HBASE_MASTER" },
-{ "name" : "HBASE_REGIONSERVER" },
-{ "name" : "HIVE_CLIENT" },
-{ "name" : "HIVE_METASTORE" },
-{ "name" : "HIVE_SERVER" },
-{ "name" : "MYSQL_SERVER" },
-{ "name" : "HCAT" },
-{ "name" : "WEBHCAT_SERVER" },
-{ "name" : "OOZIE_CLIENT" },
-{ "name" : "OOZIE_SERVER" },
-{ "name" : "PIG" },
-{ "name" : "SQOOP" },
-{ "name" : "TEZ_CLIENT" },
-{ "name" : "ZOOKEEPER_CLIENT" },
-{ "name" : "ZOOKEEPER_SERVER" },
-{ "name" : "METRICS_COLLECTOR" },
-{ "name" : "METRICS_MONITOR" }
-      ],
+      "components": [
+                {
+                    "name": "NAMENODE"
+                },
+                {
+                    "name": "SECONDARY_NAMENODE"
+                },
+                {
+                    "name": "DATANODE"
+                },
+                {
+                    "name": "HDFS_CLIENT"
+                },
+                {
+                    "name": "RESOURCEMANAGER"
+                },
+                {
+                    "name": "NODEMANAGER"
+                },
+                {
+                    "name": "YARN_CLIENT"
+                },
+                {
+                    "name": "HISTORYSERVER"
+                },
+                {
+                    "name": "MAPREDUCE2_CLIENT"
+                },
+                {
+                    "name": "ZOOKEEPER_SERVER"
+                },
+                {
+                    "name": "ZOOKEEPER_CLIENT"
+                },
+                {
+                    "name": "APP_TIMELINE_SERVER"
+                },
+                {
+                    "name": "HIVE_METASTORE"
+                },
+                {
+                    "name": "HIVE_SERVER"
+                },
+                {
+                    "name": "HIVE_CLIENT"
+                },
+                {
+                    "name": "PIG"
+                },
+                {
+                    "name": "TEZ_CLIENT"
+                },
+                {
+                    "name": "MYSQL_SERVER"
+                },
+                {
+                    "name": "SQOOP"
+                },
+                {
+                    "name": "WEBHCAT_SERVER"
+                }
+            ],
       "cardinality": "1"
     }
   ],
