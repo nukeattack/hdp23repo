@@ -1,18 +1,20 @@
 {
   "configurations": [
     {
-      "webhcat-site": {
-        "webhcat.proxyuser.hue.hosts": "*",
-        "webhcat.proxyuser.hue.groups": "*"
-      },
       "hdfs-site": {
         "dfs.webhdfs.enabled": "true"
-      },
+      }
+    },
+    {
+      "hbase-site": {
+        "hbase.hregion.memstore.block.multiplier": "2",
+        "hbase.regionserver.global.memstore.upperLimit": "1024MB"
+      }
+    },
+    {
       "core-site": {
         "hadoop.proxyuser.hcat.groups": "*",
-        "hadoop.proxyuser.hue.hosts": "*",
-        "hadoop.proxyuser.hcat.hosts": "*",
-        "hadoop.proxyuser.hue.groups": "*"
+        "hadoop.proxyuser.hcat.hosts": "*"
       }
     }
   ],
@@ -20,69 +22,77 @@
     {
       "name": "host_group_1",
       "configurations" : [ ],
-      "components": [
-                {
-                    "name": "NAMENODE"
-                },
-                {
-                    "name": "SECONDARY_NAMENODE"
-                },
-                {
-                    "name": "DATANODE"
-                },
-                {
-                    "name": "HDFS_CLIENT"
-                },
-                {
-                    "name": "RESOURCEMANAGER"
-                },
-                {
-                    "name": "NODEMANAGER"
-                },
-                {
-                    "name": "YARN_CLIENT"
-                },
-                {
-                    "name": "HISTORYSERVER"
-                },
-                {
-                    "name": "MAPREDUCE2_CLIENT"
-                },
-                {
-                    "name": "ZOOKEEPER_SERVER"
-                },
-                {
-                    "name": "ZOOKEEPER_CLIENT"
-                },
-                {
-                    "name": "APP_TIMELINE_SERVER"
-                },
-                {
-                    "name": "HIVE_METASTORE"
-                },
-                {
-                    "name": "HIVE_SERVER"
-                },
-                {
-                    "name": "HIVE_CLIENT"
-                },
-                {
-                    "name": "PIG"
-                },
-                {
-                    "name": "TEZ_CLIENT"
-                },
-                {
-                    "name": "MYSQL_SERVER"
-                },
-                {
-                    "name": "SQOOP"
-                },
-                {
-                    "name": "WEBHCAT_SERVER"
-                }
-            ],
-      "cardinality": "1"
+      "components" : [
+        {
+          "name" : "NAMENODE"
+        },
+        {
+          "name" : "SECONDARY_NAMENODE"
+        },
+        {
+          "name" : "DATANODE"
+        },
+        {
+          "name" : "HDFS_CLIENT"
+        },
+        {
+          "name" : "YARN_CLIENT"
+        },
+        {
+          "name" : "RESOURCEMANAGER"
+        },
+        {
+          "name" : "NODEMANAGER"
+        },
+        {
+          "name" : "MAPREDUCE2_CLIENT"
+        },
+        {
+          "name" : "HISTORYSERVER"
+        },
+        {
+          "name" : "APP_TIMELINE_SERVER"
+        },
+        {
+          "name" : "ZOOKEEPER_CLIENT"
+        },
+        {
+          "name" : "ZOOKEEPER_SERVER"
+        },
+        {
+          "name" : "AMBARI_SERVER"
+        },
+        {
+          "name" : "HBASE_MASTER"
+        },
+        {
+          "name" : "HBASE_REGIONSERVER"
+        },
+        {
+          "name" : "HBASE_CLIENT"
+        },
+        {
+          "name": "HIVE_METASTORE"
+        },
+        {
+          "name": "HIVE_SERVER"
+        },
+        {
+          "name": "HIVE_CLIENT"
+        },
+        {
+          "name": "TEZ_CLIENT"
+        },
+        {
+          "name": "MYSQL_SERVER"
+        },
+        {
+          "name": "WEBHCAT_SERVER"
+        }
+
+
+      ],
+      "cardinality" : "1"
     }
   ],
   "Blueprints": {
